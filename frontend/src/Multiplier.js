@@ -46,7 +46,7 @@ render() {
       return (
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">{this.props.name} is applied.</h5>
+            <h5 className="card-title">{this.props.name} is applied ✔️</h5>
             <button onClick={this.addMultiplier} className="btn btn-dark">Apply {this.props.name}</button>
             <button onClick={this.removeMultiplier} className="btn btn-dark">Undo {this.props.name}</button>
           </div>
@@ -57,7 +57,7 @@ render() {
       return (
         <div className="card">
           <div className="card-body">
-            <h5 className="card-title">{this.props.name} is not applied.</h5>
+            <h5 className="card-title">{this.props.name} is not applied ❌</h5>
             <button onClick={this.addMultiplier} className="btn btn-dark">Apply {this.props.name}</button>
             <button onClick={this.removeMultiplier} className="btn btn-dark">Undo {this.props.name}</button>
           </div>

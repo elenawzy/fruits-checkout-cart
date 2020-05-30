@@ -12,6 +12,13 @@ var cart = {
     tax: 1
 };
 
+function calculateTotal(totalPrice, discount, tax) {
+  let total = totalPrice;
+  total *= discount;
+  total *= tax;
+  return total.toFixed(2);
+}
+
 app.get("/", (req, res) => res.send("Hello World!"));
 
 app.post("/addItem", (req, res) => {
@@ -52,12 +59,13 @@ app.post("/removeMultiplier", (req, res) => {
 });
 
 app.get("/calculateTotal", (req, res) => {
-  let total = cart.totalPrice;
-  total *= cart.discount;
-  total *= cart.tax;
-  totalString = total.toFixed(2);
+  totalString = calculateTotal(cart.totalPrice, cart.discount, cart.tax);
   console.log(totalString);
   res.send({totalString});
 });
 
 app.listen(port, () => console.log("Listening on port 5000!"));
+
+module.exports = {
+  calculateTotal: calculateTotal
+}
