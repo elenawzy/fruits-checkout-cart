@@ -18,12 +18,37 @@ app.post("/addItem", (req, res) => {
   let newPrice = Number(req.body.price);
   cart.totalPrice += newPrice;
   console.log(cart.totalPrice);
+  res.end();
 });
 
 app.post("/removeItem", (req, res) => {
   let newPrice = Number(req.body.price);
   cart.totalPrice -= newPrice;
   console.log(cart.totalPrice);
+  res.end();
+});
+
+app.post("/addMultiplier", (req, res) => {
+  let newMultiplier = parseFloat(req.body.multiplier);
+  if (req.body.type === "Tax") {
+    cart.tax = newMultiplier;
+  }
+  else {
+    cart.discount = newMultiplier;
+  }
+  console.log(cart.tax);
+  res.end();
+});
+
+app.post("/removeMultiplier", (req, res) => {
+  if (req.body.type === "Tax") {
+    cart.tax = 1;
+  }
+  else {
+    cart.discount = 1;
+  }
+  console.log(cart.tax);
+  res.end();
 });
 
 app.get("/calculateTotal", (req, res) => {

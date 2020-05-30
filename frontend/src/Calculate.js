@@ -20,8 +20,8 @@ class Calculate extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.handleCalculate}>Calculate Total</button>
-        <h1>Total: ${this.state.total}</h1>
+        <button onClick={this.handleCalculate} className="btn btn-success btn-lg">Calculate Total</button>
+        <h1 className="calculate">Total: ${this.state.total}</h1>
       </div>
     );
   }

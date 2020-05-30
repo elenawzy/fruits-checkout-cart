@@ -25,7 +25,8 @@ class Item extends Component {
       this.setState({inCart: this.state.inCart - 1});
       axios.post("/removeItem", {
         price: this.props.price
-      }).then(response => {
+      })
+      .then(response => {
         console.log("Data Sent Successfully.");
       }).catch((error) => {
         console.log("Error while adding item.");
@@ -35,10 +36,17 @@ class Item extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.props.name}: ${this.props.price}, In cart: {this.state.inCart}</h1>
-        <button onClick={this.handleAddItem}>Add 1 to cart</button>
-        <button onClick={this.handleRemoveItem}>Remove 1 from cart</button>
+      <div className="card">
+        <img className="card-img-top" src={this.props.imgSource} alt={this.props.name}/>
+        <div className="card-body">
+          <h5 className="card-title">{this.props.name}</h5>
+          <p className="card-text">${this.props.price} each</p>
+          <p className="card-text">
+            In cart: <span className="badge badge-dark badge-pill">{this.state.inCart}</span>
+          </p>
+          <button onClick={this.handleAddItem} className="btn btn-success">Add 1 to cart</button>
+          <button onClick={this.handleRemoveItem} className="btn btn-outline-danger">Remove 1 from cart</button>
+        </div>
       </div>
     );
   }

@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.calculate {
+  margin: 10px;
+}
+
+/* .App {
+  background-color: #DFF0E2;
+} */
+
+.title {
+  padding: 50px 50px 0 50px;
+}
+
+.btn {
+  margin: 10px;
+}
+
+.card {
+  margin: 10px 0;
+}
+
+.itemsList {
+  padding: 50px 100px 30px 100px;
+}
+
+.multipliers {
+  padding: 0 100px 20px 100px;
+}
