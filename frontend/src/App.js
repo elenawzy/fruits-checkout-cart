@@ -13,28 +13,28 @@ function App() {
       <h1 className="title">Add items to your cart, and calculate your total at the end!</h1>
       <div className="itemsList row">
         <div className="col-lg-3 col-md-6">
-          <Item name="Bananas" price="4.00" imgSource="images/bananas.jpg"/>
+          <Item name="Bananas" price="2.00" imgSource="images/bananas.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Apples" price="7.00" imgSource="images/apples.jpg"/>
+          <Item name="Apples" price="6.00" imgSource="images/apples.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Oranges" price="6.00" imgSource="images/oranges.jpg"/>
+          <Item name="Oranges" price="0.50" imgSource="images/oranges.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Pears" price="5.00" imgSource="images/pears.jpg"/>
+          <Item name="Pears" price="0.80" imgSource="images/pears.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Cherries" price="3.00" imgSource="images/cherries.jpg"/>
+          <Item name="Watermelon" price="8.00" imgSource="images/watermelon.png"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Coconuts" price="8.00" imgSource="images/coconuts.jpg"/>
+          <Item name="Coconuts" price="3.00" imgSource="images/coconuts.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Lemons" price="3.00" imgSource="images/lemons.jpg"/>
+          <Item name="Lemons" price="0.50" imgSource="images/lemons.jpg"/>
         </div>
         <div className="col-lg-3 col-md-6">
-          <Item name="Mangoes" price="9.00" imgSource="images/mangoes.jpg"/>
+          <Item name="Mangoes" price="1.00" imgSource="images/mangoes.jpg"/>
         </div>
 
       </div>
