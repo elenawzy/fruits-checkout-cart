@@ -21,6 +21,10 @@ function calculateTotal(totalPrice, discount, tax) {
   return total.toFixed(2);
 }
 
+module.exports = {
+  calculateTotal: calculateTotal
+}
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.resolve(__dirname, "frontend/build")));
   app.get("*", (req, res) => {
@@ -80,7 +84,3 @@ app.post("/calculateTotal", (req, res) => {
 });
 
 app.listen(PORT, () => console.log("Listening on port 5000!"));
-
-module.exports = {
-  calculateTotal: calculateTotal
-}
