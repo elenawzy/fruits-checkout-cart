@@ -18,7 +18,7 @@ class Multiplier extends Component {
         multiplier: this.props.multiplier,
         type: this.props.name
       }).then(response => {
-        console.log("Data Sent Successfully.");
+        console.log(this.props.multiplier);
       }).catch((error) => {
         console.log("Error while adding item.");
       });
@@ -34,7 +34,7 @@ class Multiplier extends Component {
         multiplier: "1",
         type: this.props.name
       }).then(response => {
-        console.log("Data Sent Successfully.");
+        console.log("1");
       }).catch((error) => {
         console.log("Error while adding item.");
       });

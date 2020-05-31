@@ -10,9 +10,12 @@ class Calculate extends Component {
   }
 
   handleCalculate = () => {
-    axios.get("/calculateTotal").then(response => {
+    axios.post("/calculateTotal", {
+      total: this.state.total
+    }).then(response => {
+      console.log(response.data.total);
       this.setState({
-        total: response.data.totalString
+        total: response.data.total
       });
     });
   };

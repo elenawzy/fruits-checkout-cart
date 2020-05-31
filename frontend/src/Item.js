@@ -14,7 +14,7 @@ class Item extends Component {
     axios.post("/addItem", {
       price: this.props.price
     }).then(response => {
-      console.log("Data Sent Successfully.");
+      console.log(this.props.price);
     }).catch((error) => {
       console.log("Error while adding item.");
     });
@@ -27,7 +27,7 @@ class Item extends Component {
         price: this.props.price
       })
       .then(response => {
-        console.log("Data Sent Successfully.");
+        console.log(this.props.price);
       }).catch((error) => {
         console.log("Error while adding item.");
       });

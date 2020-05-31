@@ -21,9 +21,9 @@ function calculateTotal(totalPrice, discount, tax) {
 }
 
 if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.resolve(__dirname, "../frontend/build")));
+  app.use(express.static(path.resolve(__dirname, "frontend/build")));
   app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+    res.sendFile(path.resolve(__dirname, "frontend/build", "index.html"));
   });
 }
 
@@ -64,10 +64,10 @@ app.post("/removeMultiplier", (req, res) => {
   res.end();
 });
 
-app.get("/calculateTotal", (req, res) => {
+app.post("/calculateTotal", (req, res) => {
   totalString = calculateTotal(cart.totalPrice, cart.discount, cart.tax);
   console.log(totalString);
-  res.send({totalString});
+  res.json({total: totalString});
 });
 
 app.listen(PORT, () => console.log("Listening on port 5000!"));
