@@ -1,4 +1,4 @@
-// comment to test CI for node
+// comment to test CI workflow
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
