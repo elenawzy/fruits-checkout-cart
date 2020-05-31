@@ -23,6 +23,9 @@ function calculateTotal(totalPrice, discount, tax) {
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.resolve(__dirname, "frontend/build")));
   app.get("*", (req, res) => {
+    cart.totalPrice = 0;
+    cart.discount = 1;
+    cart.tax = 1;
     res.sendFile(path.resolve(__dirname, "frontend/build", "index.html"));
   });
 }
