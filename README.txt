@@ -1,8 +1,8 @@
 Web-app portion of A1
 Contains a frontend folder containing App.js (React), and the server named app.js (Node.js).
 
-CI made with github actions (.github/workflows folder)
-CD implemented with Heroku (Heroku automatically deploys the application when there is a push)
+CI made with github actions (.github/workflows folder) --> CI process can be seen in "Actions" tab
+CD implemented with Heroku (Heroku automatically deploys the application when there is a push) --> CD process can be seen in "environments" tab and then the deployments (If you click a certain deployment you can view the Heroku build scripts)
 
 For testing, run "npm test" in the terminal in the root directory --> this uses Mocha and Chai unit-testing and will automatically search for the test folder in the root directory.
 The unit test files can be found in the folder "test" in the root directory (test/appTest.js), if adding unit tests are needed.
