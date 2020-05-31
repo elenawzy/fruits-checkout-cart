@@ -22,6 +22,3 @@ jobs:
         node-version: 12
     - run: npm ci
     - run: npm test
-    - run: cd frontend
-    - run: npm ci
-    - run: npm run build
