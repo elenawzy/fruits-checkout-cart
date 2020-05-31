@@ -1,9 +1,11 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const path = require("path");
 
 const app = express();
 const port = 5000;
 
+app.use(express.static(path.resolve(__dirname, "../frontend/build")));
 app.use(bodyParser.json());
 
 var cart = {
@@ -19,7 +21,9 @@ function calculateTotal(totalPrice, discount, tax) {
   return total.toFixed(2);
 }
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../frontend/build", "index.html"));
+});
 
 app.post("/addItem", (req, res) => {
   let newPrice = Number(req.body.price);
@@ -64,7 +68,7 @@ app.get("/calculateTotal", (req, res) => {
   res.send({totalString});
 });
 
-app.listen(port, () => console.log("Listening on port 5000!"));
+app.listen(process.env.PORT || port, () => console.log("Listening on port 5000!"));
 
 module.exports = {
   calculateTotal: calculateTotal
