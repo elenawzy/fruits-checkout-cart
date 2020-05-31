@@ -1,4 +1,5 @@
 Web-app portion of A1
+Deployment on Heroku: https://salty-journey-73958.herokuapp.com/
 Contains a frontend folder containing App.js (React), and the server named app.js (Node.js).
 
 CI made with github actions (.github/workflows folder) --> CI process can be seen in "Actions" tab
