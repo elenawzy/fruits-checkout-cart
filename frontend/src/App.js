@@ -3,10 +3,13 @@ import './App.css';
 import Calculate from "./Calculate";
 import Item from "./Item";
 import Multiplier from "./Multiplier";
+import Refresh from "./Refresh";
 
 function App() {
   return (
     <div className="App">
+      <h2 className="title">Please refresh the session first.</h2>
+      <Refresh />
       <h1 className="title">Add items to your cart, and calculate your total at the end!</h1>
       <div className="itemsList row">
         <div className="col-lg-3 col-md-6">
