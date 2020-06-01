@@ -2,7 +2,7 @@ Web-app portion of A1
 Deployment on Heroku: https://salty-journey-73958.herokuapp.com/
 Contains a frontend folder containing App.js (React), and the server named app.js (Node.js).
 
-CI made with github actions (.github/workflows folder) --> CI process can be seen in "Actions" tab
+CI made with github actions (.github/workflows folder) --> CI process can be seen in "Actions" tab --> npm test included in CI
 CD implemented with Heroku (Heroku automatically deploys the application when there is a push) --> CD process can be seen in "environments" tab and then the deployments (If you click a certain deployment you can view the Heroku build scripts)
 
 For testing, run "npm test" in the terminal in the root directory --> this uses Mocha and Chai unit-testing and will automatically search for the test folder in the root directory.
