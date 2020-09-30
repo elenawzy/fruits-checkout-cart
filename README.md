@@ -1,4 +1,5 @@
-Web-app portion of A1
+This is a web application that implements a simple checkout cart for fruits. It contains a React and Bootstrap front-end and Node.js backend. Users may add or delete items from their cart and calculate the total with or without tax/discounts. 
+
 Deployment on Heroku: https://salty-journey-73958.herokuapp.com/
 Contains a frontend folder containing App.js (React), and the server named app.js (Node.js).
 
