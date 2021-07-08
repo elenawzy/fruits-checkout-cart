@@ -1,6 +1,6 @@
 This is a web application that implements a simple checkout cart for fruits. It contains a React and Bootstrap front-end and Node.js backend. Users may add or delete items from their cart and calculate the total with or without tax/discounts. 
 
-Deployment on Heroku: https://salty-journey-73958.herokuapp.com/
+Deployment on Heroku: https://salty-journey-73958.herokuapp.com/ (needs some time to load)
 Contains a frontend folder containing App.js (React), and the server named app.js (Node.js).
 
 CI made with github actions (.github/workflows folder) --> CI process can be seen in "Actions" tab --> npm test included in CI
